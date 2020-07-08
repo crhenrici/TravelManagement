@@ -9,7 +9,7 @@ export class TravelEditorComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
