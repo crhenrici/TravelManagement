@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "TMClient"
+  "defaultProject": "TMClient",
+  "cli": {
+    "analytics": "9a1e05fb-12b2-4d2f-af4a-33d7c7a3a25b"
+  }
 }

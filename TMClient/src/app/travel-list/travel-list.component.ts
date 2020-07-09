@@ -38,6 +38,18 @@ export class TravelListComponent implements OnInit {
     return (this.selectedValue && this.selectedValue.swisspassId) ? this.selectedValue.swisspassId : null;
   }
 
+  get selectedValueBook() {
+    return (this.selectedValue && this.selectedValue.book) ? this.selectedValue.book : null;
+  }
+
+  get selectedValuePreferredSit() {
+    return (this.selectedValue && this.selectedValue.preferredSit) ? this.selectedValue.preferredSit : null;
+  }
+
+  get selectedValueNotes() {
+    return (this.selectedValue && this.selectedValue.notes) ? this.selectedValue.notes : [];
+   }
+
   ngOnInit(): void {
   }
 
