@@ -1,9 +1,153 @@
-<div>
-  <div class="col">
-  </div>
-  <div class="col">
-    <div class="row">
-
+<div class="con">
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <p>Interner Status</p>
+        </div>
+        <div class="col-sm-2">
+          <p>{{ selectedValuePosition }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <p>Mitarbeiter: </p>
+        </div>
+        <div class="col-sm-3">
+          <mat-form-field>
+            <mat-select [(ngModel)]="selectedValue" placeholder="Employee" name="Employee">
+                <mat-option *ngFor="let data of fakeData"  [value]="data">
+                  {{ data.name }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-3">
+          <p>Geburtsdatum</p>
+        </div>
+        <div class="col-sm-2">
+          <p>{{ selectedValueBirthday }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <h2>ID'S und Bonussysteme</h2>
+        <div class="row">
+          <div class="col-sm-2">
+            <p>AVIS Kundenkarte</p>
+          </div>
+          <div class="col-sm-2">
+            <p *ngIf="selectedValue" ><b>{{ selectedValueAvisState ? 'registriert' : 'nicht registriert'}}</b></p>
+          </div>
+          <div class="col-sm-3">
+            <p>{{ selectedValueAvisId }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <p>Swisspass</p>
+          </div>
+          <div class="col-sm-2">
+            <p *ngIf="selectedValue" ><b>{{ selectedValueSwisspassState ? 'registriert' : 'nicht registriert' }}</b></p>
+          </div>
+          <div class="col-sm-3">
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <p>Bonussysteme 1</p>
+          </div>
+          <div class="col-sm-2">
+            <p><b></b></p>
+          </div>
+          <div class="col-sm-3">
+            <p>some number</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <p>Bonussysteme 2</p>
+          </div>
+          <div class="col-sm-2">
+            <p><b></b></p>
+          </div>
+          <div class="col-sm-3">
+            <p>some number</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>Präferenzen</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Sitzplatzreservierung</p>
+          </div>
+          <div class="col-sm-4">
+            <p><b>{{ fakeData[0].book }}</b></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Bevorzugter Sitzplatz</p>
+          </div>
+          <div class="col-sm-3">
+            <p><b></b></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Individueller Wunsch</p>
+          </div>
+          <div class="col-sm-3">
+            <p><b>{{ fakeData[0].notes[0]}}</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>Interne Notizen</h2>
+        <p>{{ fakeData[0].notes[1] }}</p>
+      </div>
+      <div class="row">
+        <h2>5 Sterne Unterkünfte</h2>
+        <p>Done with a table</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="row">
+        <div class="row">
+          <div class="col-xs-1">
+            <h4>Zeitraum</h4>
+          </div>
+          <div class="col-xs-1">
+            <h4>Startdatum</h4>
+          </div>
+          <div class="col-xs-1">
+            <h4>Enddatum</h4>
+          </div>
+          <div class="col-xs-2">
+            <h4>Angezeigter Zeitraum</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1">
+            <p>Ohne Fiter</p>
+          </div>
+          <div class="col-xs-1"></div>
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2">
+            <p>01.01.1900-31-12.2100</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <p>Done with table</p>
+      </div>
+      <div class="row">
+        <p>Done with table</p>
+      </div>
     </div>
   </div>
 </div>
