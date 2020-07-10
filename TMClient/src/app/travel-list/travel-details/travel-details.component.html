@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-3">
+    <p>Interner Status</p>
+  </div>
+  <div class="col-sm-3">
+    <p>{{ selectedValuePosition }}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <p>Employee: </p>
+  </div>
+  <div class="col-sm-4">
+    <mat-form-field>
+      <mat-select [(ngModel)]="selectedValue" placeholder="Employee" name="Employee">
+        <mat-option *ngFor="let data of inputData; trackBy: trackByFn" [value]="data">
+          {{ data.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm-3">
+    <p>Birthdate: </p>
+  </div>
+  <div class="col-sm-2">
+    <p>{{ selectedValueBirthday | date: 'shortDate' }}</p>
+  </div>
+</div>
+<div class="row">
+  <h2>ID'S and Bonus system</h2>
+  <div class="row">
+    <div class="col-sm-2">
+      <p>AVIS customer card</p>
+    </div>
+    <div class="col-sm-2">
+      <p *ngIf="selectedValue"><b>{{ selectedValueAvisState ? 'registriert' : 'nicht registriert'}}</b></p>
+    </div>
+    <div class="col-sm-3">
+      <p>{{ selectedValueAvisId }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <p>Swisspass</p>
+    </div>
+    <div class="col-sm-2">
+      <p *ngIf="selectedValue"><b>{{ selectedValueSwisspassState ? 'registriert' : 'nicht registriert' }}</b></p>
+    </div>
+    <div class="col-sm-3">
+      <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <p>Bonus system 1</p>
+    </div>
+    <div class="col-sm-2">
+      <p><b></b></p>
+    </div>
+    <div class="col-sm-3">
+      <p>some number</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <p>Bonus system 2</p>
+    </div>
+    <div class="col-sm-2">
+      <p><b></b></p>
+    </div>
+    <div class="col-sm-3">
+      <p>some number</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2>Prefernces</h2>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Seat reservation</p>
+    </div>
+    <div class="col-sm-4">
+      <p><b>{{ selectedValueBook}}</b></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Preferred seat</p>
+    </div>
+    <div class="col-sm-3">
+      <p><b>{{ selectedValuePreferredSit }}</b></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Individual wish</p>
+    </div>
+    <div class="col-sm-3">
+      <p><b>{{ selectedValueNotes[0]}}</b></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2>Internal notes</h2>
+  <p>{{ selectedValueNotes[1] }}</p>
+</div>
+<div class="row">
+  <h2>5 Star accomodations</h2>
+  <p>Done with a table</p>
+</div>
