@@ -2,7 +2,7 @@
   <div class="col-sm-2">
   </div>
   <div class="col-sm-4"></div>
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <p>Interner Status</p>
   </div>
   <div class="col-sm-3">
@@ -15,18 +15,19 @@
   </div>
   <div class="col-sm-4">
     <mat-form-field>
-      <mat-select [(ngModel)]="selectedValue" placeholder="Employee" name="Employee">
+      <mat-label>Choose an employee</mat-label>
+      <mat-select [(ngModel)]="selectedValue">
         <mat-option *ngFor="let data of inputData; trackBy: trackByFn" [value]="data">
           {{ data.name }}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <p>Birthdate: </p>
   </div>
   <div class="col-sm-2">
-    <p>{{ selectedValueBirthday | date: 'shortDate' }}</p>
+    <p>{{ selectedValueBirthday | date: 'dd/MM/yyyy' }}</p>
   </div>
 </div>
 <div class="row">
@@ -50,7 +51,7 @@
       <p *ngIf="selectedValue"><b>{{ selectedValueSwisspassState ? 'registriert' : 'nicht registriert' }}</b></p>
     </div>
     <div class="col-sm-3">
-      <p></p>
+      <p>{{ selectedValueSwisspassId }}</p>
     </div>
   </div>
   <div class="row">
@@ -58,7 +59,7 @@
       <p>Bonus system 1</p>
     </div>
     <div class="col-sm-2">
-      <p><b></b></p>
+      <p><b>{{ selectedValueBonus[0]}}</b></p>
     </div>
     <div class="col-sm-3">
       <p>some number</p>
@@ -69,7 +70,7 @@
       <p>Bonus system 2</p>
     </div>
     <div class="col-sm-2">
-      <p><b></b></p>
+      <p><b>{{ selectedValueBonus[1] }}</b></p>
     </div>
     <div class="col-sm-3">
       <p>some number</p>
@@ -79,7 +80,7 @@
 <div class="row">
   <h2>Prefernces</h2>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-2">
       <p>Seat reservation</p>
     </div>
     <div class="col-sm-4">
@@ -87,7 +88,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-2">
       <p>Preferred seat</p>
     </div>
     <div class="col-sm-3">
@@ -95,7 +96,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-2">
       <p>Individual wish</p>
     </div>
     <div class="col-sm-3">

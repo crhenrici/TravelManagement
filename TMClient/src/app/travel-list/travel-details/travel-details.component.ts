@@ -50,6 +50,10 @@ export class TravelDetailsComponent implements OnInit {
     return (this.selectedValue && this.selectedValue.notes) ? this.selectedValue.notes : [];
    }
 
+   get selectedValueBonus() {
+     return (this.selectedValue && this.selectedValue.bonusProgramm) ? this.selectedValue.bonusProgramm : [];
+   }
+
    trackByFn(index, item) {
      return index;
    }

@@ -1,9 +1,35 @@
-<div class="con">
+  <div class="con">
   <div class="row">
     <div class="col-6 col-md-5">
       <app-travel-details [inputData]="fakeData"></app-travel-details>
     </div>
     <div class="col-12 col-md-7">
+      <div class="row">
+        <div class="row">
+          <div class="col-xs-2">
+            <h4>Period</h4>
+          </div>
+          <div class="col-xs-2">
+            <h4>Start date</h4>
+          </div>
+          <div class="col-xs-2">
+            <h4>End date</h4>
+          </div>
+          <div class="col-xs-2">
+            <h4>Shown Period</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2">
+            <p>Without filter</p>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-2">
+            <p>01.01.1900-31-12.2100</p>
+          </div>
+        </div>
+      </div>
       <app-travel-table></app-travel-table>
     </div>
   </div>

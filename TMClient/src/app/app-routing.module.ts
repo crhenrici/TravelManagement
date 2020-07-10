@@ -1,6 +1,5 @@
 import { TravelListComponent } from './travel-list/travel-list.component';
 import { TravelEditorComponent } from './travel-editor/travel-editor.component';
-import { AppComponent } from './app.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
