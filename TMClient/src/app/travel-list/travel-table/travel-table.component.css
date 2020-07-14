@@ -2,10 +2,6 @@
     margin-bottom: 200px;
 }
 
-.travel-table {
-    margin-top: 40px;
-}
-
-.header-section {
-    margin-top: 80px;
+table {
+  width: 90%;
 }
