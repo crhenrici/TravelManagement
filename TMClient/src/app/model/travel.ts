@@ -3,6 +3,7 @@ import { Person } from './person';
 export interface Travel {
 
   person: Person;
+  travelId: number;
   departTime: string;
   departDate: Date;
   arrivalTime: string;

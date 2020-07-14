@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ import { EditStayComponent } from './travel-editor/edit-stay/edit-stay.component
     MatDividerModule,
     MatToolbarModule,
     MatTableModule,
+    MatCardModule,
     FormsModule,
     MatSelectModule,
     BrowserAnimationsModule

@@ -11,6 +11,7 @@ export class TravelDetailsComponent implements OnInit {
   selectedValue: Person;
   @Input()
   inputData: Person;
+  displayedColumns = ['stayId', 'name', 'column2', 'purpose', 'column1'];
 
   constructor() { }
 

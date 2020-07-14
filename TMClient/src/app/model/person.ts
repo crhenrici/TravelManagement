@@ -1,5 +1,6 @@
 export interface Person {
   name: string;
+  personId: number;
   birthday: Date;
   position: string;
   bonusProgramm: string[];

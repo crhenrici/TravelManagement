@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { MockData } from './../../model/mockData';
+import { Stay } from './../../model/stay';
+import { Travel } from './../../model/travel';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-travel-table',
@@ -9,12 +13,21 @@ export class TravelTableComponent implements OnInit {
 
   displayedColumns = ['travelID', 'departDate', 'departTime', 'departPlace', 'departCountry', 'arriveDate', 'arriveTime', 'arrivePlace', 'arriveCountry', 'promoCompany', 'bookReference',
   'bookState', 'price', 'payState', 'travelReason', 'comments'];
-  dispColumns = ['stayID', 'checkInDate', 'checkOutDate', 'place', 'country', 'accomodation', 'room', 'bookState', 'paymentState',
+  dispColumns = ['stayID', 'checkInDate', 'checkInTime', 'checkOutDate', 'checkOutTime', 'place', 'country', 'accomodation', 'room', 'bookState', 'paymentState',
   'price', 'rating', 'purpose', 'comment', 'reserve1', 'reserve2', 'reserve3'];
+
+  @Input()
+  inputData: MockData;
+  tableTravel: MatTableDataSource<Travel>;
+  tableStay: MatTableDataSource<Stay>;
 
   constructor() { }
 
   ngOnInit(): void {
+    const travelData = this.inputData.dataTravel;
+    const stayData = this.inputData.dataStay;
+    this.tableTravel = new MatTableDataSource(travelData);
+    this.tableStay = new MatTableDataSource(stayData);
   }
 
 }

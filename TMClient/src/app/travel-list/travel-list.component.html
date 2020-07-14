@@ -1,5 +1,13 @@
   <div class="con">
-      <app-travel-details [inputData]="fakeData"></app-travel-details>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Person Details</mat-card-title>
+            <mat-card-subtitle>Overview of the details of the employee</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <app-travel-details [inputData]="fakeData"></app-travel-details>
+        </mat-card-content>
+    </mat-card>
       <div class="header-section">
         <div class="row">
           <div class="col-xs-2">
@@ -26,5 +34,5 @@
           </div>
         </div>
       </div>
-      <app-travel-table></app-travel-table>
+      <app-travel-table [inputData]="mockData"></app-travel-table>
 </div>
