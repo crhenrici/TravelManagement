@@ -1,7 +1,5 @@
+import { TravelFacade } from './../abstraction/travelFacade';
 import { MockData } from './../model/mockData';
-import { Stay } from './../model/stay';
-import { Travel } from './../model/travel';
-import { TravelHttpService } from './../travel-http.service';
 import { Person } from './../model/person';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -15,11 +13,12 @@ export class TravelListComponent implements OnInit {
   fakeData: Person[];
   mockData: MockData;
 
-  constructor(private travelService: TravelHttpService) { }
+  constructor(private travelFacade: TravelFacade) { }
 
   ngOnInit(): void {
-   this.mockData = this.travelService.getData();
-   this.fakeData = this.mockData.dataPerson;
+    this.travelFacade.getData().subscribe(data => {
+      this.fakeData = data;
+    });
   }
 
 }
