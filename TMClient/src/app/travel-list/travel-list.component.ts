@@ -1,5 +1,5 @@
+import { Observable, Subscription } from 'rxjs';
 import { TravelFacade } from './../abstraction/travelFacade';
-import { MockData } from './../model/mockData';
 import { Person } from './../model/person';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -11,7 +11,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TravelListComponent implements OnInit {
 
   fakeData: Person[];
-  mockData: MockData;
 
   constructor(private travelFacade: TravelFacade) { }
 

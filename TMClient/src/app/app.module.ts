@@ -16,11 +16,12 @@ import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { TravelEditorComponent } from './travel-editor/travel-editor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TravelListComponent } from './travel-list/travel-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TravelDetailsComponent } from './travel-list/travel-details/travel-details.component';
 import { TravelTableComponent } from './travel-list/travel-table/travel-table.component';
 import { EditTravelComponent } from './travel-editor/edit-travel/edit-travel.component';
 import { EditStayComponent } from './travel-editor/edit-stay/edit-stay.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { EditStayComponent } from './travel-editor/edit-stay/edit-stay.component
     MatToolbarModule,
     MatTableModule,
     MatCardModule,
+    HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSelectModule,
     BrowserAnimationsModule
   ],

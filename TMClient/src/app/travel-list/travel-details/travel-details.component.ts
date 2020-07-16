@@ -55,6 +55,10 @@ export class TravelDetailsComponent implements OnInit {
      return (this.selectedValue && this.selectedValue.bonusProgramm) ? this.selectedValue.bonusProgramm : [];
    }
 
+   get selectedValueBonusId() {
+     return (this.selectedValue && this.selectedValue.bonusProgrammId) ? this.selectedValue.bonusProgrammId : [];
+   }
+
    trackByFn(index, item) {
      return index;
    }

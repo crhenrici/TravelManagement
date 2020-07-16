@@ -1,4 +1,6 @@
+import { TravelFacade } from './../abstraction/travelFacade';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-person-editor',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonEditorComponent implements OnInit {
 
-  constructor() { }
+  personForm = new FormGroup({
+    name: new FormControl(''),
+    bonusprogramm1: new FormControl(''),
+    bonusprogrammId1: new FormControl(''),
+    swisspassState: new FormControl(''),
+    book: new FormControl(''),
+    note1: new FormControl(''),
+    birthdate: new FormControl(''),
+    bonusprogramm2: new FormControl(''),
+    bonusprogrammId2: new FormControl(''),
+    swisspassId: new FormControl(''),
+    preferredSit: new FormControl(''),
+    preferredSit2: new FormControl(''),
+    note2: new FormControl(''),
+    position: new FormControl(''),
+    avisState: new FormControl(''),
+    avisId: new FormControl('')
+  });
+
+  constructor(private travelFacade: TravelFacade) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.travelFacade.postData(this.personForm.value);
   }
 
 }

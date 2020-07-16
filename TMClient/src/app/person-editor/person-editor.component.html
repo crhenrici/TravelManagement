@@ -1,96 +1,98 @@
 <div class="container con">
+  <h2>Add new employee</h2>
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit()" >
   <div class="row">
     <div class="col-xs-6 col-md-2">
       <h3>Person</h3>
       <mat-form-field>
         <mat-label>Name</mat-label>
-        <input matInput>
+        <input matInput formControlName="name">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
-      <h3>Bonusprogramme</h3>
+      <h3>Bonusprogram</h3>
       <mat-form-field>
-        <mat-label>1. Bonusprogramm</mat-label>
-        <input matInput>
+        <mat-label>1. Bonusprogram</mat-label>
+        <input matInput formControlName="bonusprogramm1">
       </mat-form-field>
       <mat-form-field>
         <mat-label>ID</mat-label>
-        <input matInput>
+        <input matInput formControlName="bonusprogrammId1">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-3">
-      <h3>Kundenkarte und Swisspass</h3>
+      <h3>Customer card und Swisspass</h3>
       <mat-form-field>
-        <mat-label>Swisspass Status</mat-label>
-        <input matInput>
+        <mat-label>Swisspass state</mat-label>
+        <input matInput formControlName="swisspassState">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
-      <h3>Präferenzen</h3>
+      <h3>Preferences</h3>
       <mat-form-field>
-        <mat-label>Reservieren?</mat-label>
-        <input matInput>
+        <mat-label>Book?</mat-label>
+        <input matInput formControlName="book">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
-      <h3>Notizen</h3>
+      <h3>Notes</h3>
       <mat-form-field>
-        <mat-label>Notiz 1</mat-label>
-        <input matInput>
+        <mat-label>Note 1</mat-label>
+        <input matInput formControlName="note1">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6 col-md-2">
       <mat-form-field>
-        <mat-label>Geburtsdatum</mat-label>
-        <input matInput>
+        <mat-label>Birthdate</mat-label>
+        <input matInput formControlName="birthdate">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
       <mat-form-field>
-        <mat-label>2. Bonusprogramm</mat-label>
-        <input matInput>
+        <mat-label>2. Bonusprogram</mat-label>
+        <input matInput formControlName="bonusprogramm2">
       </mat-form-field>
       <mat-form-field>
         <mat-label>ID</mat-label>
-        <input matInput>
+        <input matInput formControlName="bonusprogrammId2">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-3">
       <mat-form-field>
         <mat-label>Swisspass ID</mat-label>
-        <input matInput>
+        <input matInput formControlName="swisspassId">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
       <mat-form-field>
-        <mat-label>Bevorzugter Sitzplatz</mat-label>
-        <input matInput>
+        <mat-label>Preferred seat</mat-label>
+        <input matInput formControlName="preferredSit">
       </mat-form-field>
       <mat-form-field>
-        <input matInput>
+        <input matInput formControlName="preferredSit2">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
       <mat-form-field>
-        <mat-label>Notiz 2</mat-label>
-        <input matInput>
+        <mat-label>Note 2</mat-label>
+        <input matInput formControlName="note2">
       </mat-form-field>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6 col-md-2">
       <mat-form-field>
-        <mat-label>Interner Stand</mat-label>
-        <input matInput>
+        <mat-label>Position</mat-label>
+        <input matInput formControlName="position">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2"></div>
     <div class="col-xs-6 col-md-3">
       <mat-form-field>
-        <mat-label>AVIS Status</mat-label>
-        <input matInput>
+        <mat-label>AVIS state</mat-label>
+        <input matInput formControlName="avisState">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2"></div>
@@ -101,10 +103,11 @@
     <div class="col-xs-6 col-md-3">
       <mat-form-field>
         <mat-label>AVIS ID</mat-label>
-        <input matInput>
+        <input matInput formControlName="avisId">
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2"></div>
   </div>
-  <button mat-raised-button>Reisen anzeigen</button>
+  <button mat-raised-button type="submit">Show travels</button>
+</form>
 </div>

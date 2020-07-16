@@ -4,6 +4,7 @@ export interface Person {
   birthday: Date;
   position: string;
   bonusProgramm: string[];
+  bonusProgrammId: number[];
   swisspassState: boolean;
   swisspassId: string;
   avisState: boolean;
