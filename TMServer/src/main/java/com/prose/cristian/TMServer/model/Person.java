@@ -32,6 +32,9 @@ public class Person {
 	private String[] bonusProgramm;
 	@Getter
 	@Setter
+	private Integer[] bonusProgrammId;
+	@Getter
+	@Setter
 	private Boolean swisspassState;
 	@Getter
 	@Setter
@@ -56,7 +59,7 @@ public class Person {
 		
 	}
 	
-	public Person(long id, String name, Date birthdate, String position, String[] bonusProgramm, Boolean swisspassState,
+	public Person(long id, String name, Date birthdate, String position, String[] bonusProgramm, Integer[] bonusProgrammId, Boolean swisspassState,
 			String swisspassId, String avisId, Boolean avisState, String book, String preferredSit, String[] notes) {
 		super();
 		this.id = id;
@@ -64,6 +67,7 @@ public class Person {
 		this.birthdate = birthdate;
 		this.position = position;
 		this.bonusProgramm = bonusProgramm;
+		this.bonusProgrammId = bonusProgrammId;
 		this.swisspassState = swisspassState;
 		this.swisspassId = swisspassId;
 		this.avisId = avisId;
@@ -73,14 +77,14 @@ public class Person {
 		this.notes = notes;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", birthdate=" + birthdate + ", position=" + position
-				+ ", bonusProgramm=" + Arrays.toString(bonusProgramm) + ", swisspassState=" + swisspassState
-				+ ", swisspassId=" + swisspassId + ", avisState=" + avisState + ", book=" + book + ", preferredSit="
+				+ ", bonusProgramm=" + Arrays.toString(bonusProgramm) + ", bonusProgrammId="
+				+ Arrays.toString(bonusProgrammId) + ", swisspassState=" + swisspassState + ", swisspassId="
+				+ swisspassId + ", avisId=" + avisId + ", avisState=" + avisState + ", book=" + book + ", preferredSit="
 				+ preferredSit + ", notes=" + Arrays.toString(notes) + "]";
 	}
-	
+
 	
 }
