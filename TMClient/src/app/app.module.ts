@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ import { TravelTableComponent } from './travel-list/travel-table/travel-table.co
 import { EditTravelComponent } from './travel-editor/edit-travel/edit-travel.component';
 import { EditStayComponent } from './travel-editor/edit-stay/edit-stay.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
+import { TableOverviewComponent } from './table-overview/table-overview.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     TravelDetailsComponent,
     TravelTableComponent,
     EditTravelComponent,
-    EditStayComponent
+    EditStayComponent,
+    TableOverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatTableModule,
     MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

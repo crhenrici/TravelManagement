@@ -1,0 +1,154 @@
+<div class="container">
+  <div class="row first-table">
+    <table mat-table>
+      <ng-container matColumnDef="travelID">
+        <th mat-header-cell *matHeaderCellDef>T. ID</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="departDate">
+        <th mat-header-cell *matHeaderCellDef>Departure date</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="departTime">
+        <th mat-header-cell *matHeaderCellDef>Departure time</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="departPlace">
+        <th mat-header-cell *matHeaderCellDef>Departure city</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="departCountry">
+        <th mat-header-cell *matHeaderCellDef>Departure country</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="arriveDate">
+        <th mat-header-cell *matHeaderCellDef>Arrival date</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="arriveTime">
+        <th mat-header-cell *matHeaderCellDef>Arrival time</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="arrivePlace">
+        <th mat-header-cell *matHeaderCellDef>Arrival city</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="arriveCountry">
+        <th mat-header-cell *matHeaderCellDef>Arrival country</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="promoCompany">
+        <th mat-header-cell *matHeaderCellDef>Promotion company</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="bookReference">
+        <th mat-header-cell *matHeaderCellDef>Booking reference</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="bookState">
+        <th mat-header-cell *matHeaderCellDef>Booking state</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price CHF</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="payState">
+        <th mat-header-cell *matHeaderCellDef>Payment state</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="travelReason">
+        <th mat-header-cell *matHeaderCellDef>Traveling reason</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef>Comments</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="row">
+    <table mat-table [dataSource]="tableStay">
+      <ng-container matColumnDef="stayID">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.stayId }}</td>
+      </ng-container>
+      <ng-container matColumnDef="checkInDate">
+        <th mat-header-cell *matHeaderCellDef>Check In Date</th>
+        <td mat-cell *matCellDef="let element">{{ element.checkinDate | date: 'dd/MM/yyyy' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="checkInTime">
+        <th mat-header-cell *matHeaderCellDef>Check In Time</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="checkOutDate">
+        <th mat-header-cell *matHeaderCellDef>Check Out Date</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="checkOutTime">
+        <th mat-header-cell *matHeaderCellDef>Check Out Time</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="place">
+        <th mat-header-cell *matHeaderCellDef>City</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef>Country</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="accomodation">
+        <th mat-header-cell *matHeaderCellDef>Accomodation name</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="room">
+        <th mat-header-cell *matHeaderCellDef>Room type</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="bookState">
+        <th mat-header-cell *matHeaderCellDef>Booking state</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="paymentState">
+        <th mat-header-cell *matHeaderCellDef>Payment state</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price CHF</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef>Rating</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="purpose">
+        <th mat-header-cell *matHeaderCellDef>Purpose</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef>Comment</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="reserve1">
+        <th mat-header-cell *matHeaderCellDef>Reserve 1</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="reserve2">
+        <th mat-header-cell *matHeaderCellDef>Reserve 2</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="reserve3">
+        <th mat-header-cell *matHeaderCellDef>Reserve 3</th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="dispColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: dispColumns;"></tr>
+    </table>
+  </div>
+
+  <button mat-raised-button>Reset filter</button>
+</div>

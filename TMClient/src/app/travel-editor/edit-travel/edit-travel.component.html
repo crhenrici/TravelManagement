@@ -26,9 +26,11 @@
       <mat-label>Depart time</mat-label>
       <input matInput>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="inputWidth">
       <mat-label>Depart date</mat-label>
-      <input matInput>
+      <input matInput [matDatepicker]="departDate">
+      <mat-datepicker-toggle matSuffix [for]="departDate"></mat-datepicker-toggle>
+      <mat-datepicker #departDate></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="col-xs-6 col-md-2">
@@ -65,9 +67,11 @@
       <mat-label>Arrival time</mat-label>
       <input matInput>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="inputWidth">
       <mat-label>Arrival date</mat-label>
-      <input matInput>
+      <input matInput [matDatepicker]="arrivalDate">
+      <mat-datepicker-toggle matSuffix [for]="arrivalDate"></mat-datepicker-toggle>
+      <mat-datepicker #arrivalDate></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="col-xs-6 col-md-2">

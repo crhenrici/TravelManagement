@@ -31,7 +31,11 @@
       <h3>Preferences</h3>
       <mat-form-field>
         <mat-label>Book?</mat-label>
-        <input matInput formControlName="book">
+        <mat-select formControlName="book">
+            <mat-option value="true">Yes</mat-option>
+            <mat-option value="false">No</mat-option>
+        </mat-select>
+        <input matInput >
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
@@ -44,9 +48,11 @@
   </div>
   <div class="row">
     <div class="col-xs-6 col-md-2">
-      <mat-form-field>
+      <mat-form-field class="inputWidth">
         <mat-label>Birthdate</mat-label>
-        <input matInput formControlName="birthdate">
+        <input matInput formControlName="birthdate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">

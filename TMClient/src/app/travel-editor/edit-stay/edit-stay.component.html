@@ -27,9 +27,11 @@
         <mat-label>Check-In time</mat-label>
         <input matInput>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field class="inputWidth">
         <mat-label>Check-In date</mat-label>
-        <input matInput>
+        <input matInput [matDatepicker]="checkIn">
+        <mat-datepicker-toggle matSuffix [for]="checkIn"></mat-datepicker-toggle>
+        <mat-datepicker #checkIn></mat-datepicker>
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2">
@@ -70,9 +72,11 @@
         <mat-label>Check-Out time</mat-label>
         <input matInput>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field class="inputWidth">
         <mat-label>Check-Out date</mat-label>
-        <input matInput>
+        <input matInput [matDatepicker]="checkOut">
+        <mat-datepicker-toggle matSuffix [for]="checkOut"></mat-datepicker-toggle>
+        <mat-datepicker #checkOut></mat-datepicker>
       </mat-form-field>
     </div>
     <div class="col-xs-6 col-md-2"></div>
