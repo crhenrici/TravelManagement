@@ -2,8 +2,8 @@ import { Promotion } from './promotion';
 import { Person } from './person';
 export interface Travel {
 
-  person: Person;
   travelId: number;
+  personId: number;
   departTime: string;
   departDate: Date;
   arrivalTime: string;
