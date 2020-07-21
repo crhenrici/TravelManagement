@@ -1,5 +1,5 @@
 import { Observable, Subscription } from 'rxjs';
-import { TravelFacade } from './../abstraction/travelFacade';
+import { PersonFacade } from '../abstraction/personFacade';
 import { Person } from './../model/person';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -12,10 +12,10 @@ export class TravelListComponent implements OnInit {
 
   fakeData: Person[];
 
-  constructor(private travelFacade: TravelFacade) { }
+  constructor(private personFacade: PersonFacade) { }
 
   ngOnInit(): void {
-    this.travelFacade.getData().subscribe(data => {
+    this.personFacade.getData().subscribe(data => {
       this.fakeData = data;
     });
   }

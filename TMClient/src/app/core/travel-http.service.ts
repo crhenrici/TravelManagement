@@ -1,30 +1,26 @@
-import { Person } from './../model/person';
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Travel } from '../model/travel';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-
 @Injectable({
   providedIn: 'root'
 })
 export class TravelHttpService {
 
-  httpUrl = 'http://localhost:9010/person';
+  httpUrl = 'http://localhost:9010/travel';
   constructor(private http: HttpClient) { }
 
-  public getData(): Observable<Person[]> {
+  public getData(): Observable<Travel[]> {
     const url = `${this.httpUrl}/fetchAll`;
-    return this.http.get<Person[]>(url, httpOptions);
+    return this.http.get<Travel[]>(url, httpOptions);
   }
 
-  public saveData(person: Person): Observable<Person> {
+  public saveData(travel: Travel): Observable<Travel> {
     const url = `${this.httpUrl}/save`;
-    console.log('Person: ', person);
-    // TODO: add error handling
-    return this.http.post<Person>(url, person, httpOptions);
+    return this.http.post<Travel>(url, travel, httpOptions);
   }
 }

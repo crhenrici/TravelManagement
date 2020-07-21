@@ -1,4 +1,4 @@
-import { TravelFacade } from './../abstraction/travelFacade';
+import { PersonFacade } from '../abstraction/personFacade';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -28,13 +28,13 @@ export class PersonEditorComponent implements OnInit {
     avisId: new FormControl('')
   });
 
-  constructor(private travelFacade: TravelFacade) { }
+  constructor(private personFacade: PersonFacade) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    this.travelFacade.postData(this.personForm.value);
+    this.personFacade.postData(this.personForm.value);
   }
 
 }
