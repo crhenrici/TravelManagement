@@ -15,7 +15,7 @@ export class PersonFacade {
    return this.httpService.getData();
   }
 
-  public postData(person: any) {
+  public postData(person: any): void {
     const newPerson: Person = {
       personId: null,
       name: person.name,

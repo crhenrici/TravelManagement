@@ -33,7 +33,7 @@ export class PersonEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.personFacade.postData(this.personForm.value);
   }
 
